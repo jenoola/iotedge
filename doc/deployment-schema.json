@@ -211,7 +211,8 @@
                                             "type": "string",
                                             "examples": [
                                                 "FROM /* INTO $upstream"
-                                            ]
+                                            ],
+                                            "pattern": "^(?i)FROM\\s\/.*?(\\s|\\sWHERE\\s.*?\\s)INTO\\s(\\$upstream|BrokeredEndpoint\\(.*?\\))$"
                                         }
                                     }
                                 },
