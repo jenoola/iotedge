@@ -139,12 +139,13 @@
                                                 }
                                             }
                                         }
-                                    }
+                                    },
+                                    "additionalProperties": false
                                 },
                                 "modules": {
                                     "type": "object",
                                     "patternProperties": {
-                                        "^[a-zA-Z0-9_.-]*$": {
+                                        "^[a-zA-Z][a-zA-Z0-9_.-]*$": {
                                             "type": "object",
                                             "required": [
                                                 "type",
@@ -234,7 +235,7 @@
                 }
             },
             "patternProperties": {
-                "^.+$": {
+                "^[a-zA-Z][a-zA-Z0-9_.-]*$": {
                     "type": "object",
                     "required": [
                         "properties.desired"
@@ -289,7 +290,7 @@
         "env": {
             "type": "object",
             "patternProperties": {
-                "^.+$": {
+                "[^\\+#$\\s]+": {
                     "type": "object",
                     "required": [
                         "value"
