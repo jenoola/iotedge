@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
-    "title": "JSON schema for Azure IoT Edge Deployment",
+    "title": "JSON schema for Azure IoT Edge Deployment version 1.0",
     "required": [
         "modulesContent"
     ],
@@ -76,7 +76,8 @@
                                                                     "type": "string"
                                                                 },
                                                                 "address": {
-                                                                    "type": "string"
+                                                                    "type": "string",
+                                                                    "pattern": "^[^\\s]+$"
                                                                 }
                                                             }
                                                         }
@@ -291,7 +292,7 @@
         "env": {
             "type": "object",
             "patternProperties": {
-                "[^\\+#$\\s]+": {
+                "^[^\\+#$\\s]+$": {
                     "type": "object",
                     "required": [
                         "value"
