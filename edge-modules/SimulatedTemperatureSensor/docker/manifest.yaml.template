@@ -1,4 +1,4 @@
-image: __REGISTRY__/__NAMESPACE__/azureiotedge-simulated-temperature-sensor:__VERSION__
+image: __REGISTRY__/__NAMESPACE__/mqtt_sensor:__VERSION__
 tags: __TAGS__
 manifests:
   -

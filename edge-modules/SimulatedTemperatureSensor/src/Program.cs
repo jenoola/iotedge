@@ -73,7 +73,7 @@ namespace SimulatedTemperatureSensor
                 $"Initializing simulated temperature sensor to send {messagesToSendString} messages, at an interval of {messageDelay.TotalSeconds} seconds.\n"
                 + $"To change this, set the environment variable {MessageCountConfigKey} to the number of messages that should be sent (set it to -1 to send unlimited messages).");
 
-            TransportType transportType = configuration.GetValue("ClientTransportType", TransportType.Amqp_Tcp_Only);
+            TransportType transportType = configuration.GetValue("ClientTransportType", TransportType.Mqtt);
             Console.WriteLine($"Using transport {transportType.ToString()}");
 
             var retryPolicy = new RetryPolicy(TimeoutErrorDetectionStrategy, TransientRetryStrategy);
